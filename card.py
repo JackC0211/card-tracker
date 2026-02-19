@@ -5,5 +5,5 @@ class Card:
     number: str
     set_code: str
     rarity: str
-    quantity: int
+    quantity: int = 0
 
