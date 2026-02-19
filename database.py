@@ -49,7 +49,7 @@ class Database:
         self.conn = get_connection()
 
 
-    def create_expansion(self, exp: Expansion) -> None:
+    def add_expansion(self, exp: Expansion) -> None:
         """Creates an expansion in the database"""
 
         c = self.conn.cursor()
@@ -68,5 +68,5 @@ class Database:
 if __name__ == "__main__":
     exp1 = Expansion("BLK","Black Bolt")
     db = Database()
-    db.create_expansion(exp1)
+    db.add_expansion(exp1)
 
