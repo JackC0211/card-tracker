@@ -1,6 +1,7 @@
 import sqlite3
-db_name = "database.db"
+from expansion import Expansion
 
+db_name = "database.db"
 
 expansions_table = """CREATE TABLE IF NOT EXISTS expansions (
     code TEXT PRIMARY KEY ,
@@ -15,18 +16,23 @@ cards_table = """CREATE TABLE IF NOT EXISTS cards (
     FOREIGN KEY (exp_code) REFERENCES expansions(code)
     )
 """
-def connect_db() -> sqlite3.Cursor:
+
+def get_connection() -> sqlite3.Connection:
     connection_obj = sqlite3.connect(db_name)
-    cursor_obj = connection_obj.cursor()
-    return cursor_obj
+    return connection_obj
 
 def init_db():
-    c = connect_db()
+    conn = get_connection()
+    c = conn.cursor()
+    
     c.execute(expansions_table)
     print("exp init")
     c.execute(cards_table)
     print("cards init")
-    print("fully init")
+
+    conn.commit()
+    conn.close()
 
 if __name__ == "__main__":
     init_db()
+
