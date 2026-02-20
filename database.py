@@ -25,7 +25,7 @@ def init_db():
     print("exp table init")
     c.execute("""
     CREATE TABLE IF NOT EXISTS ownedCards (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        card_id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
         number TEXT NOT NULL,
         exp_code TEXT NOT NULL,
@@ -86,7 +86,7 @@ class Database:
         conn = get_connection()
         c = conn.cursor()
 
-        c.execute("""SELECT id, name, number, exp_code, rarity, quantity 
+        c.execute("""SELECT card_id, name, number, exp_code, rarity, quantity 
                   FROM ownedCards
                   WHERE (name, number, exp_code, rarity) = (?,?,?,?)""",
                   (newCard.name, newCard.number, newCard.exp_code, newCard.rarity)
@@ -107,7 +107,9 @@ class Database:
         return True
         
     def increase_quantity(self, card: Card, quantity: int):
-        print(f"increasing id '{card.card_id}' by {quantity}")
+        card.quantity += quantity
+        
+
 
 if __name__ == "__main__":
     exp1 = Expansion("BLK","Black Bolt")
