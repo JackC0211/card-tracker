@@ -79,7 +79,7 @@ class Database:
                   (name, number, exp_code, rarity, quantity) VALUES (?,?,?,?,?)""",
                   (card.name, card.number, card.exp_code, card.rarity, card.quantity))
         conn.commit()
-        print(f"card {card} succesfully added to db")
+        print(f"card {card.label} succesfully added to db")
         conn.close()
 
     def check_exists_card(self, newCard: Card) -> bool:
@@ -115,7 +115,7 @@ class Database:
                   SET quantity = ?
                   WHERE card_id = ?;
                   """, (card.quantity, card.card_id))
-        print(f"Quantity of {card} increased ")
+        print(f"Quantity of {card.label} increased ")
         conn.commit()
         conn.close()
         

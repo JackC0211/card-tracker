@@ -36,7 +36,7 @@ class Card:
 
     @property
     def label(self) -> str:
-        return f"{self.name} [{self.number}] ({self.rarity})"
+        return f"({self.exp_code}) - {self.name} [{self.number}] ({self.rarity})"
 
     @classmethod
     def from_row(cls, row: tuple):
