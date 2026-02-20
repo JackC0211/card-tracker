@@ -72,12 +72,39 @@ class Database:
             print("This expansion code does not exist in the database")
             return
         
+        if self.check_exists_card(newCard=card):
+            return
+
         c.execute("""INSERT OR IGNORE INTO ownedCards
                   (name, number, exp_code, rarity, quantity) VALUES (?,?,?,?,?)""",
                   (card.name, card.number, card.exp_code, card.rarity, card.quantity))
         conn.commit()
         print(f"card {card} succesfully added to db")
         conn.close()
+
+    def check_exists_card(self, newCard: Card) -> bool:
+        conn = get_connection()
+        c = conn.cursor()
+
+        c.execute("""SELECT * FROM ownedCards
+                  WHERE (name, number, exp_code, rarity) = (?,?,?,?)""",
+                  (newCard.name, newCard.number, newCard.exp_code, newCard.rarity)
+                  )
+        similar_card = Card.from_db_str(str(c.fetchone()))
+        if not similar_card:
+            print("Card does not exist")
+            conn.close()
+            return False
+        print(similar_card)
+        print("Card has been found in db")
+
+
+        self.increase_quantity(similar_card, newCard.quantity)
+        conn.close()
+        return True
+        
+    def increase_quantity(self, card: Card, quantity: int):
+        print(f"increasing id '{card.card_id}' by {quantity}")
 
 if __name__ == "__main__":
     exp1 = Expansion("BLK","Black Bolt")
