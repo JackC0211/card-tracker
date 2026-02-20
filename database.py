@@ -108,6 +108,16 @@ class Database:
         
     def increase_quantity(self, card: Card, quantity: int):
         card.quantity += quantity
+        conn = get_connection()
+        c= conn.cursor()
+        c.execute("""
+                  UPDATE ownedCards
+                  SET quantity = ?
+                  WHERE card_id = ?;
+                  """, (card.quantity, card.card_id))
+        print(f"Quantity of {card} increased ")
+        conn.commit()
+        conn.close()
         
 
 
