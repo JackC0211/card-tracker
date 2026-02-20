@@ -86,20 +86,23 @@ class Database:
         conn = get_connection()
         c = conn.cursor()
 
-        c.execute("""SELECT * FROM ownedCards
+        c.execute("""SELECT id, name, number, exp_code, rarity, quantity 
+                  FROM ownedCards
                   WHERE (name, number, exp_code, rarity) = (?,?,?,?)""",
                   (newCard.name, newCard.number, newCard.exp_code, newCard.rarity)
                   )
-        similar_card = Card.from_db_str(str(c.fetchone()))
-        if not similar_card:
+        
+        row = c.fetchone()
+        similar_card = Card.from_row(row)
+        if similar_card is None:
             print("Card does not exist")
             conn.close()
             return False
-        print(similar_card)
+        
         print("Card has been found in db")
 
-
         self.increase_quantity(similar_card, newCard.quantity)
+
         conn.close()
         return True
         
