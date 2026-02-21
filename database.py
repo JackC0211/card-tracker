@@ -63,11 +63,11 @@ class Database:
         conn.close()
         return
 
-    def add_new_card(self, card: Card):
+    def add_new_card(self, card: dict):
         conn = get_connection()
         c = conn.cursor()
 
-        c.execute("""SELECT * FROM expansions WHERE code = ?""", (card.exp_code,))
+        c.execute("""SELECT * FROM expansions WHERE code = ?""", (card['exp_code'],))
         if not c.fetchone():
             print("This expansion code does not exist in the database")
             return
@@ -77,23 +77,23 @@ class Database:
 
         c.execute("""INSERT OR IGNORE INTO ownedCards
                   (name, number, exp_code, rarity, quantity) VALUES (?,?,?,?,?)""",
-                  (card.name, card.number, card.exp_code, card.rarity, card.quantity))
+                  (card['name'], card['number'], card['exp_code'], card['rarity'], card['quantity']))
         conn.commit()
-        print(f"card {card.label} succesfully added to db")
+        print(f"card {card['label']} succesfully added to db")
         conn.close()
 
-    def check_exists_card(self, newCard: Card) -> bool:
+    def check_exists_card(self, newCard: dict) -> bool:
         conn = get_connection()
         c = conn.cursor()
 
         c.execute("""SELECT card_id, name, number, exp_code, rarity, quantity 
                   FROM ownedCards
                   WHERE (name, number, exp_code, rarity) = (?,?,?,?)""",
-                  (newCard.name, newCard.number, newCard.exp_code, newCard.rarity)
+                  (newCard['name'], newCard['number'], newCard['exp_code'], newCard['rarity'])
                   )
         
         row = c.fetchone()
-        similar_card = Card.from_row(row)
+        similar_card = Card.from_row(row).to_dict()
         if similar_card is None:
             print("Card does not exist")
             conn.close()
@@ -101,21 +101,21 @@ class Database:
         
         print("Card has been found in db")
 
-        self.increase_quantity(similar_card, newCard.quantity)
+        self.increase_quantity(similar_card, newCard['quantity'])
 
         conn.close()
         return True
         
-    def increase_quantity(self, card: Card, quantity: int):
-        card.quantity += quantity
+    def increase_quantity(self, card: dict, quantity: int):
+        card['quantity'] += quantity
         conn = get_connection()
         c= conn.cursor()
         c.execute("""
                   UPDATE ownedCards
                   SET quantity = ?
                   WHERE card_id = ?;
-                  """, (card.quantity, card.card_id))
-        print(f"Quantity of {card.label} increased ")
+                  """, (card['quantity'], card['card_id']))
+        print(f"Quantity of {card['label']} increased ")
         conn.commit()
         conn.close()
         

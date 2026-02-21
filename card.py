@@ -53,3 +53,12 @@ class Card:
             _quantity=quantity,
             _card_id=card_id
     )
+
+    def to_dict(self):
+        return {"name": self._name,
+                "number": self._number,
+                "exp_code": self._exp_code,
+                "rarity": self._rarity,
+                "quantity": self._quantity,
+                "label": self.label
+                }
