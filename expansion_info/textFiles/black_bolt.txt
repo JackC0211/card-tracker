@@ -1,0 +1,172 @@
+001,Snivy, Common
+002,Servine, Common
+003,Serperior ex, Double Rare
+004,Pansage, Common
+005,Simisage, Uncommon
+006,Petilil, Common
+007,Lilligant, Uncommon
+008,Maractus, Common
+009,Karrablast, Common
+010,Foongus, Common
+011,Amoonguss, Uncommon
+012,Victini, Rare
+013,Darumaka, Common
+014,Darmanitan, Uncommon
+015,Larvesta, Common
+016,Volcarona, Rare
+017,Panpour, Common
+018,Simipour, Uncommon
+019,Tympole, Common
+020,Palpitoad, Common
+021,Seismitoad, Uncommon
+022,Tirtouga, Uncommon
+023,Carracosta, Rare
+024,Alomomola, Uncommon
+025,Cubchoo, Common
+026,Beartic, Rare
+027,Cryogonal, Uncommon
+028,Kyurem ex, Double Rare
+029,Emolga, Common
+030,Tynamo, Common
+031,Eelektrik, Uncommon
+032,Eelektross, Uncommon
+033,Thundurus, Rare
+034,Zekrom ex, Double Rare
+035,Munna, Common
+036,Musharna, Uncommon
+037,Solosis, Common
+038,Duosion, Common
+039,Reuniclus, Uncommon
+040,Elgyem, Common
+041,Beheeyem, Uncommon
+042,Golett, Common
+043,Golurk, Uncommon
+044,Meloetta ex, Double Rare
+045,Drilbur, Common
+046,Excadrill ex, Double Rare
+047,Timburr, Common
+048,Gurdurr, Common
+049,Conkeldurr, Rare
+050,Throh, Uncommon
+051,Dwebble, Common
+052,Crustle, Uncommon
+053,Landorus, Rare
+054,Venipede, Common
+055,Whirlipede, Common
+056,Scolipede, Uncommon
+057,Sandile, Common
+058,Krokorok, Common
+059,Krookodile, Uncommon
+060,Escavalier, Uncommon
+061,Klink, Common
+062,Klang, Common
+063,Klinklang, Rare
+064,Pawniard, Common
+065,Bisharp, Uncommon
+066,Cobalion, Rare
+067,Genesect ex, Double Rare
+068,Axew, Common
+069,Fraxure, Common
+070,Haxorus, Rare
+071,Pidove, Common
+072,Tranquill, Common
+073,Unfezant, Uncommon
+074,Audino, Common
+075,Minccino, Common
+076,Cinccino, Uncommon
+077,Rufflet, Common
+078,Braviary, Uncommon
+079,Air Balloon, Uncommon
+080,Antique Cover Fossil, Common
+081,Energy Coin, Uncommon
+082,Fennel, Uncommon
+083,N’s Plan, Uncommon
+084,Pokégear 3.0, Uncommon
+085,Professor’s Research, Uncommon
+086,Prism Energy, Uncommon
+087,Snivy, Illustration Rare
+088,Servine, Illustration Rare
+089,Pansage, Illustration Rare
+090,Simisage, Illustration Rare
+091,Petilil, Illustration Rare
+092,Lilligant, Illustration Rare
+093,Maractus, Illustration Rare
+094,Karrablast, Illustration Rare
+095,Foongus, Illustration Rare
+096,Amoonguss, Illustration Rare
+097,Darumaka, Illustration Rare
+098,Darmanitan, Illustration Rare
+099,Larvesta, Illustration Rare
+100,Volcarona, Illustration Rare
+101,Panpour, Illustration Rare
+102,Simipour, Illustration Rare
+103,Tympole, Illustration Rare
+104,Palpitoad, Illustration Rare
+105,Seismitoad, Illustration Rare
+106,Tirtouga, Illustration Rare
+107,Carracosta, Illustration Rare
+108,Alomomola, Illustration Rare
+109,Cubchoo, Illustration Rare
+110,Beartic, Illustration Rare
+111,Cryogonal, Illustration Rare
+112,Emolga, Illustration Rare
+113,Tynamo, Illustration Rare
+114,Eelektrik, Illustration Rare
+115,Eelektross, Illustration Rare
+116,Munna, Illustration Rare
+117,Musharna, Illustration Rare
+118,Solosis, Illustration Rare
+119,Duosion, Illustration Rare
+120,Elgyem, Illustration Rare
+121,Beheeyem, Illustration Rare
+122,Golett, Illustration Rare
+123,Golurk, Illustration Rare
+124,Drilbur, Illustration Rare
+125,Timburr, Illustration Rare
+126,Gurdurr, Illustration Rare
+127,Conkeldurr, Illustration Rare
+128,Throh, Illustration Rare
+129,Dwebble, Illustration Rare
+130,Crustle, Illustration Rare
+131,Landorus, Illustration Rare
+132,Venipede, Illustration Rare
+133,Whirlipede, Illustration Rare
+134,Scolipede, Illustration Rare
+135,Sandile, Illustration Rare
+136,Krokorok, Illustration Rare
+137,Krookodile, Illustration Rare
+138,Escavalier, Illustration Rare
+139,Klink, Illustration Rare
+140,Klang, Illustration Rare
+141,Klinklang, Illustration Rare
+142,Pawniard, Illustration Rare
+143,Bisharp, Illustration Rare
+144,Cobalion, Illustration Rare
+145,Axew, Illustration Rare
+146,Fraxure, Illustration Rare
+147,Haxorus, Illustration Rare
+148,Pidove, Illustration Rare
+149,Tranquill, Illustration Rare
+150,Unfezant, Illustration Rare
+151,Audino, Illustration Rare
+152,Minccino, Illustration Rare
+153,Cinccino, Illustration Rare
+154,Rufflet, Illustration Rare
+155,Braviary, Illustration Rare 
+156,Serperior ex, Ultra Rare
+157,Kyurem ex, Ultra Rare
+158,Zekrom ex, Ultra Rare
+159,Meloetta ex, Ultra Rare
+160,Excadrill ex, Ultra Rare
+161,Genesect ex, Ultra Rare
+162,Fennel, Ultra Rare
+163,N’s Plan, Ultra Rare
+164,Serperior ex, Special Illustration Rare
+165,Kyurem ex, Special Illustration Rare
+166,Zekrom ex, Special Illustration Rare
+167,Meloetta ex, Special Illustration Rare
+168,Excadrill ex, Special Illustration Rare
+169,Genesect ex , Special Illustration Rare
+170,N’s Plan , Special Illustration Rare
+171,Victini , Black White Rare
+172,Zekrom ex , Black White Rare

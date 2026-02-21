@@ -1,0 +1,862 @@
+[
+    {
+        "name": "Snivy",
+        "number": "001",
+        "rarity": "Common"
+    },
+    {
+        "name": "Servine",
+        "number": "002",
+        "rarity": "Common"
+    },
+    {
+        "name": "Serperior ex",
+        "number": "003",
+        "rarity": "Double Rare"
+    },
+    {
+        "name": "Pansage",
+        "number": "004",
+        "rarity": "Common"
+    },
+    {
+        "name": "Simisage",
+        "number": "005",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Petilil",
+        "number": "006",
+        "rarity": "Common"
+    },
+    {
+        "name": "Lilligant",
+        "number": "007",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Maractus",
+        "number": "008",
+        "rarity": "Common"
+    },
+    {
+        "name": "Karrablast",
+        "number": "009",
+        "rarity": "Common"
+    },
+    {
+        "name": "Foongus",
+        "number": "010",
+        "rarity": "Common"
+    },
+    {
+        "name": "Amoonguss",
+        "number": "011",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Victini",
+        "number": "012",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Darumaka",
+        "number": "013",
+        "rarity": "Common"
+    },
+    {
+        "name": "Darmanitan",
+        "number": "014",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Larvesta",
+        "number": "015",
+        "rarity": "Common"
+    },
+    {
+        "name": "Volcarona",
+        "number": "016",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Panpour",
+        "number": "017",
+        "rarity": "Common"
+    },
+    {
+        "name": "Simipour",
+        "number": "018",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Tympole",
+        "number": "019",
+        "rarity": "Common"
+    },
+    {
+        "name": "Palpitoad",
+        "number": "020",
+        "rarity": "Common"
+    },
+    {
+        "name": "Seismitoad",
+        "number": "021",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Tirtouga",
+        "number": "022",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Carracosta",
+        "number": "023",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Alomomola",
+        "number": "024",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Cubchoo",
+        "number": "025",
+        "rarity": "Common"
+    },
+    {
+        "name": "Beartic",
+        "number": "026",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Cryogonal",
+        "number": "027",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Kyurem ex",
+        "number": "028",
+        "rarity": "Double Rare"
+    },
+    {
+        "name": "Emolga",
+        "number": "029",
+        "rarity": "Common"
+    },
+    {
+        "name": "Tynamo",
+        "number": "030",
+        "rarity": "Common"
+    },
+    {
+        "name": "Eelektrik",
+        "number": "031",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Eelektross",
+        "number": "032",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Thundurus",
+        "number": "033",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Zekrom ex",
+        "number": "034",
+        "rarity": "Double Rare"
+    },
+    {
+        "name": "Munna",
+        "number": "035",
+        "rarity": "Common"
+    },
+    {
+        "name": "Musharna",
+        "number": "036",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Solosis",
+        "number": "037",
+        "rarity": "Common"
+    },
+    {
+        "name": "Duosion",
+        "number": "038",
+        "rarity": "Common"
+    },
+    {
+        "name": "Reuniclus",
+        "number": "039",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Elgyem",
+        "number": "040",
+        "rarity": "Common"
+    },
+    {
+        "name": "Beheeyem",
+        "number": "041",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Golett",
+        "number": "042",
+        "rarity": "Common"
+    },
+    {
+        "name": "Golurk",
+        "number": "043",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Meloetta ex",
+        "number": "044",
+        "rarity": "Double Rare"
+    },
+    {
+        "name": "Drilbur",
+        "number": "045",
+        "rarity": "Common"
+    },
+    {
+        "name": "Excadrill ex",
+        "number": "046",
+        "rarity": "Double Rare"
+    },
+    {
+        "name": "Timburr",
+        "number": "047",
+        "rarity": "Common"
+    },
+    {
+        "name": "Gurdurr",
+        "number": "048",
+        "rarity": "Common"
+    },
+    {
+        "name": "Conkeldurr",
+        "number": "049",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Throh",
+        "number": "050",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Dwebble",
+        "number": "051",
+        "rarity": "Common"
+    },
+    {
+        "name": "Crustle",
+        "number": "052",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Landorus",
+        "number": "053",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Venipede",
+        "number": "054",
+        "rarity": "Common"
+    },
+    {
+        "name": "Whirlipede",
+        "number": "055",
+        "rarity": "Common"
+    },
+    {
+        "name": "Scolipede",
+        "number": "056",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Sandile",
+        "number": "057",
+        "rarity": "Common"
+    },
+    {
+        "name": "Krokorok",
+        "number": "058",
+        "rarity": "Common"
+    },
+    {
+        "name": "Krookodile",
+        "number": "059",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Escavalier",
+        "number": "060",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Klink",
+        "number": "061",
+        "rarity": "Common"
+    },
+    {
+        "name": "Klang",
+        "number": "062",
+        "rarity": "Common"
+    },
+    {
+        "name": "Klinklang",
+        "number": "063",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Pawniard",
+        "number": "064",
+        "rarity": "Common"
+    },
+    {
+        "name": "Bisharp",
+        "number": "065",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Cobalion",
+        "number": "066",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Genesect ex",
+        "number": "067",
+        "rarity": "Double Rare"
+    },
+    {
+        "name": "Axew",
+        "number": "068",
+        "rarity": "Common"
+    },
+    {
+        "name": "Fraxure",
+        "number": "069",
+        "rarity": "Common"
+    },
+    {
+        "name": "Haxorus",
+        "number": "070",
+        "rarity": "Rare"
+    },
+    {
+        "name": "Pidove",
+        "number": "071",
+        "rarity": "Common"
+    },
+    {
+        "name": "Tranquill",
+        "number": "072",
+        "rarity": "Common"
+    },
+    {
+        "name": "Unfezant",
+        "number": "073",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Audino",
+        "number": "074",
+        "rarity": "Common"
+    },
+    {
+        "name": "Minccino",
+        "number": "075",
+        "rarity": "Common"
+    },
+    {
+        "name": "Cinccino",
+        "number": "076",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Rufflet",
+        "number": "077",
+        "rarity": "Common"
+    },
+    {
+        "name": "Braviary",
+        "number": "078",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Air Balloon",
+        "number": "079",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Antique Cover Fossil",
+        "number": "080",
+        "rarity": "Common"
+    },
+    {
+        "name": "Energy Coin",
+        "number": "081",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Fennel",
+        "number": "082",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "N’s Plan",
+        "number": "083",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Pokégear 3.0",
+        "number": "084",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Professor’s Research",
+        "number": "085",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Prism Energy",
+        "number": "086",
+        "rarity": "Uncommon"
+    },
+    {
+        "name": "Snivy",
+        "number": "087",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Servine",
+        "number": "088",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Pansage",
+        "number": "089",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Simisage",
+        "number": "090",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Petilil",
+        "number": "091",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Lilligant",
+        "number": "092",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Maractus",
+        "number": "093",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Karrablast",
+        "number": "094",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Foongus",
+        "number": "095",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Amoonguss",
+        "number": "096",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Darumaka",
+        "number": "097",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Darmanitan",
+        "number": "098",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Larvesta",
+        "number": "099",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Volcarona",
+        "number": "100",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Panpour",
+        "number": "101",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Simipour",
+        "number": "102",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Tympole",
+        "number": "103",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Palpitoad",
+        "number": "104",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Seismitoad",
+        "number": "105",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Tirtouga",
+        "number": "106",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Carracosta",
+        "number": "107",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Alomomola",
+        "number": "108",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Cubchoo",
+        "number": "109",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Beartic",
+        "number": "110",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Cryogonal",
+        "number": "111",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Emolga",
+        "number": "112",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Tynamo",
+        "number": "113",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Eelektrik",
+        "number": "114",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Eelektross",
+        "number": "115",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Munna",
+        "number": "116",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Musharna",
+        "number": "117",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Solosis",
+        "number": "118",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Duosion",
+        "number": "119",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Elgyem",
+        "number": "120",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Beheeyem",
+        "number": "121",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Golett",
+        "number": "122",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Golurk",
+        "number": "123",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Drilbur",
+        "number": "124",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Timburr",
+        "number": "125",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Gurdurr",
+        "number": "126",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Conkeldurr",
+        "number": "127",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Throh",
+        "number": "128",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Dwebble",
+        "number": "129",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Crustle",
+        "number": "130",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Landorus",
+        "number": "131",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Venipede",
+        "number": "132",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Whirlipede",
+        "number": "133",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Scolipede",
+        "number": "134",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Sandile",
+        "number": "135",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Krokorok",
+        "number": "136",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Krookodile",
+        "number": "137",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Escavalier",
+        "number": "138",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Klink",
+        "number": "139",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Klang",
+        "number": "140",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Klinklang",
+        "number": "141",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Pawniard",
+        "number": "142",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Bisharp",
+        "number": "143",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Cobalion",
+        "number": "144",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Axew",
+        "number": "145",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Fraxure",
+        "number": "146",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Haxorus",
+        "number": "147",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Pidove",
+        "number": "148",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Tranquill",
+        "number": "149",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Unfezant",
+        "number": "150",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Audino",
+        "number": "151",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Minccino",
+        "number": "152",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Cinccino",
+        "number": "153",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Rufflet",
+        "number": "154",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Braviary",
+        "number": "155",
+        "rarity": "Illustration Rare"
+    },
+    {
+        "name": "Serperior ex",
+        "number": "156",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "Kyurem ex",
+        "number": "157",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "Zekrom ex",
+        "number": "158",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "Meloetta ex",
+        "number": "159",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "Excadrill ex",
+        "number": "160",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "Genesect ex",
+        "number": "161",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "Fennel",
+        "number": "162",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "N’s Plan",
+        "number": "163",
+        "rarity": "Ultra Rare"
+    },
+    {
+        "name": "Serperior ex",
+        "number": "164",
+        "rarity": "Special Illustration Rare"
+    },
+    {
+        "name": "Kyurem ex",
+        "number": "165",
+        "rarity": "Special Illustration Rare"
+    },
+    {
+        "name": "Zekrom ex",
+        "number": "166",
+        "rarity": "Special Illustration Rare"
+    },
+    {
+        "name": "Meloetta ex",
+        "number": "167",
+        "rarity": "Special Illustration Rare"
+    },
+    {
+        "name": "Excadrill ex",
+        "number": "168",
+        "rarity": "Special Illustration Rare"
+    },
+    {
+        "name": "Genesect ex",
+        "number": "169",
+        "rarity": "Special Illustration Rare"
+    },
+    {
+        "name": "N’s Plan",
+        "number": "170",
+        "rarity": "Special Illustration Rare"
+    },
+    {
+        "name": "Victini",
+        "number": "171",
+        "rarity": "Black White Rare"
+    },
+    {
+        "name": "Zekrom ex",
+        "number": "172",
+        "rarity": "Black White Rare"
+    }
+]
