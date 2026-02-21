@@ -22,4 +22,7 @@ trying to create something with no ai help
 
 ### **v2**
 
-[] idk yet
+[] add complete sets
+[] Find % of complete set found
+[] Be able to see full sets
+
