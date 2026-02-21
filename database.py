@@ -1,19 +1,16 @@
 import sqlite3
 from typing import Any
 
+ALLOWED_TABLES = {"ownedCards"}
 db_name = "database.db"
 cardValueKeys = ("card_id","name", "number","exp_code","rarity","quantity")
 
-def get_connection() -> sqlite3.Connection:
-    """Connects to the database\n
-    Returns the connection object"""
-    connection_obj = sqlite3.connect(db_name)
-    return connection_obj
+
 
 def init_db() -> None: # creates the tables (ownedCards, expansions) in the databsae
     """Creates the expansions and cards tables"""
     
-    conn = get_connection()
+    conn = Database.get_connection()
     c = conn.cursor()
 
     c.execute("""
@@ -40,6 +37,13 @@ class Database:
     def __init__(self):
         init_db()
 
+    @staticmethod
+    def get_connection() -> sqlite3.Connection:
+        """Connects to the database\n
+        Returns the connection object"""
+        connection_obj = sqlite3.connect(db_name)
+        return connection_obj
+
     def add_expansion(self, expansion: dict[str,Any]) -> None:
         """Creates an expansion in the database
 
@@ -47,7 +51,7 @@ class Database:
         ------
         expansion: *dict[str:Any]* = The expansion to be added
         """
-        conn = get_connection()
+        conn = Database.get_connection()
         c = conn.cursor()
         # Find if the code that is trying to be created is already in use
         c.execute("""SELECT * FROM expansions WHERE code = ?""", (expansion["code"],))
@@ -67,7 +71,7 @@ class Database:
 
     def add_new_card(self, card: dict[str,Any], owned: bool):
         """Adds a new card into the database"""
-        conn = get_connection()
+        conn = Database.get_connection()
         c = conn.cursor()
 
         c.execute("""SELECT * FROM expansions WHERE code = ?""", (card['exp_code'],))
@@ -82,7 +86,9 @@ class Database:
             tableName = "ownedCards"
         else:
             tableName = "ownedCards" #Change this
-            
+
+        if tableName not in ALLOWED_TABLES:
+            raise ValueError("Invalid table name")
         query = f"""INSERT OR IGNORE INTO {tableName}
                 (name, number, exp_code, rarity, quantity)
                 VALUES (?,?,?,?,?)"""
@@ -101,7 +107,7 @@ class Database:
     def check_exists_card(self, newCard: dict[str,Any]) -> bool:
         """Checks if a card with matching information is in the database"""
         
-        conn = get_connection()
+        conn = Database.get_connection()
         c = conn.cursor()
 
         c.execute("""SELECT card_id, name, number, exp_code, rarity, quantity 
@@ -126,7 +132,7 @@ class Database:
     def increase_quantity(self, card_quantity: int, card_id: int, quantity: int):
         """Increase the quantity of a card in the database"""
         card_quantity += quantity
-        conn = get_connection()
+        conn = Database.get_connection()
         c= conn.cursor()
         c.execute("""
                   UPDATE ownedCards
