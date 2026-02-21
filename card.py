@@ -60,5 +60,6 @@ class Card:
                 "exp_code": self._exp_code,
                 "rarity": self._rarity,
                 "quantity": self._quantity,
+                "card_id": self._card_id or None,
                 "label": self.label
                 }
