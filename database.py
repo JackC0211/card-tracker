@@ -1,10 +1,10 @@
 import sqlite3
+from typing import Any
+
 from expansion import Expansion
-from card import Card
 
 db_name = "database.db"
-
-
+cardValueKeys = ("card_id","name", "number","exp_code","rarity","quantity")
 
 def get_connection() -> sqlite3.Connection:
     connection_obj = sqlite3.connect(db_name)
@@ -22,7 +22,6 @@ def init_db():
         name TEXT UNIQUE
     )
     """)
-    print("exp table init")
     c.execute("""
     CREATE TABLE IF NOT EXISTS ownedCards (
         card_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -34,36 +33,32 @@ def init_db():
         FOREIGN KEY (exp_code) REFERENCES expansions(code)
     )
     """)
-    print("card table created")
-
     conn.commit()
     conn.close()
 class Database:
     def __init__(self):
         init_db()
-        print("init")
 
-
-    def add_expansion(self, exp: Expansion) -> None:
+    def add_expansion(self, expansion: dict[str,Any]) -> None:
         """Creates an expansion in the database"""
         conn = get_connection()
         c = conn.cursor()
         # Find if the code that is trying to be created is already in use
-        c.execute("""SELECT * FROM expansions WHERE code = ?""", (exp.code,))
+        c.execute("""SELECT * FROM expansions WHERE code = ?""", (expansion["code"],))
         if c.fetchone():
             print("This expansion already exists in the db.")
             return 
         c.execute("""INSERT INTO expansions
                   (code,name)VALUES (?,?)""",
-                  (exp.code,exp.name))
+                  (expansion["code"],expansion["name"]))
 
         conn.commit()
-        print(f"Expansion {exp} succesfully added into the database")
+        print(f"Expansion {expansion} succesfully added into the database")
 
         conn.close()
         return
 
-    def add_new_card(self, card: dict):
+    def add_new_card(self, card: dict[str,Any]):
         conn = get_connection()
         c = conn.cursor()
 
@@ -82,7 +77,7 @@ class Database:
         print(f"card {card['label']} succesfully added to db")
         conn.close()
 
-    def check_exists_card(self, newCard: dict) -> bool:
+    def check_exists_card(self, newCard: dict[str,Any]) -> bool:
         conn = get_connection()
         c = conn.cursor()
 
@@ -92,12 +87,13 @@ class Database:
                   (newCard['name'], newCard['number'], newCard['exp_code'], newCard['rarity'])
                   )
         
+
         row = c.fetchone()
-        similar_card = Card.from_row(row).to_dict()
-        if similar_card is None:
+        if row == 'None':
             print("Card does not exist")
             conn.close()
             return False
+        similar_card = dict(zip(cardValueKeys,row))
         
         print("Card has been found in db")
 
@@ -106,23 +102,17 @@ class Database:
         conn.close()
         return True
         
-    def increase_quantity(self, card: dict, quantity: int):
+    def increase_quantity(self, card: dict[str,Any], quantity: int):
+        """Increase the quantity of a card in the database"""
         card['quantity'] += quantity
         conn = get_connection()
         c= conn.cursor()
         c.execute("""
                   UPDATE ownedCards
                   SET quantity = ?
-                  WHERE card_id = ?;
-                  """, (card['quantity'], card['card_id']))
-        print(f"Quantity of {card['label']} increased ")
+                  WHERE card_id = ?""",
+                  (card['quantity'], card['card_id']))
+        
+        print(f"Quantity of {card.values()} increased ")
         conn.commit()
         conn.close()
-        
-
-
-if __name__ == "__main__":
-    exp1 = Expansion("BLK","Black Bolt")
-    db = Database()
-    db.add_expansion(exp1)
-
