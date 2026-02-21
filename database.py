@@ -5,8 +5,6 @@ ALLOWED_TABLES = {"ownedCards"}
 db_name = "database.db"
 cardValueKeys = ("card_id","name", "number","exp_code","rarity","quantity")
 
-
-
 def init_db() -> None: # creates the tables (ownedCards, expansions) in the databsae
     """Creates the expansions and cards tables"""
     
@@ -15,7 +13,8 @@ def init_db() -> None: # creates the tables (ownedCards, expansions) in the data
 
     c.execute("""
     CREATE TABLE IF NOT EXISTS expansions (
-        code TEXT PRIMARY KEY ,
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        code TEXT UNIQUE,
         name TEXT UNIQUE
     )
     """)
@@ -30,6 +29,17 @@ def init_db() -> None: # creates the tables (ownedCards, expansions) in the data
         FOREIGN KEY (exp_code) REFERENCES expansions(code)
     )
     """)
+    c.execute("""
+    CREATE TABLE IF NOT EXISTS cards (
+        id INTEGER PRIMARY KEY,
+        expansion_id INTEGER NOT NULL,
+        card_number TEXT,
+        name TEXT,
+        rarity TEXT,
+        FOREIGN KEY (expansion_id) REFERENCES expansions(id)
+    )
+    """)
+
     conn.commit()
     conn.close()
 class Database:
@@ -140,6 +150,6 @@ class Database:
                   WHERE card_id = ?""",
                   (card_quantity, card_id))
         
-        print(f"Quantity of id: {card_id} increased ")
+        print(f"Quantity of card with id: {card_id} increased ")
         conn.commit()
         conn.close()
