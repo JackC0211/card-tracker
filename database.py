@@ -7,10 +7,12 @@ db_name = "database.db"
 cardValueKeys = ("card_id","name", "number","exp_code","rarity","quantity")
 
 def get_connection() -> sqlite3.Connection:
+    """Connects to the database\n
+    Returns the connection object"""
     connection_obj = sqlite3.connect(db_name)
     return connection_obj
 
-def init_db():
+def init_db() -> None: # creates the tables (ownedCards, expansions) in the databsae
     """Creates the expansions and cards tables"""
     
     conn = get_connection()
@@ -36,17 +38,24 @@ def init_db():
     conn.commit()
     conn.close()
 class Database:
+    """Object that interacts with the database"""
     def __init__(self):
         init_db()
 
     def add_expansion(self, expansion: dict[str,Any]) -> None:
-        """Creates an expansion in the database"""
+        """Creates an expansion in the database
+
+        Inputs
+        ------
+        expansion: *dict[str:Any]* = The expansion to be added
+        """
         conn = get_connection()
         c = conn.cursor()
         # Find if the code that is trying to be created is already in use
         c.execute("""SELECT * FROM expansions WHERE code = ?""", (expansion["code"],))
-        if c.fetchone():
-            print("This expansion already exists in the db.")
+
+        if c.fetchone(): # Prevents multiple of the same set being created
+            print("This expansion already exists in the db.") 
             return 
         c.execute("""INSERT INTO expansions
                   (code,name)VALUES (?,?)""",
@@ -58,7 +67,8 @@ class Database:
         conn.close()
         return
 
-    def add_new_card(self, card: dict[str,Any]):
+    def add_new_card(self, card: dict[str,Any], owned: bool):
+        """Adds a new card into the database"""
         conn = get_connection()
         c = conn.cursor()
 
@@ -70,14 +80,21 @@ class Database:
         if self.check_exists_card(newCard=card):
             return
 
-        c.execute("""INSERT OR IGNORE INTO ownedCards
+        if owned:
+            tableName = "ownedCards"
+        else:
+            tableName = "ownedCards" #Change this
+
+        c.execute("""INSERT OR IGNORE INTO ?
                   (name, number, exp_code, rarity, quantity) VALUES (?,?,?,?,?)""",
-                  (card['name'], card['number'], card['exp_code'], card['rarity'], card['quantity']))
+                  (tableName, card['name'], card['number'], card['exp_code'], card['rarity'], card['quantity']))
         conn.commit()
         print(f"card {card['label']} succesfully added to db")
         conn.close()
 
     def check_exists_card(self, newCard: dict[str,Any]) -> bool:
+        """Checks if a card with matching information is in the database"""
+        
         conn = get_connection()
         c = conn.cursor()
 
@@ -87,14 +104,13 @@ class Database:
                   (newCard['name'], newCard['number'], newCard['exp_code'], newCard['rarity'])
                   )
         
-
-        row = c.fetchone()
-        if row is None:
+        row = c.fetchone() #checks if an instance exists
+        if row is None: # returns None if no instance
             print("Card does not exist")
             conn.close()
             return False
         
-        similar_card = dict(zip(cardValueKeys,row))
+        similar_card = dict(zip(cardValueKeys,row)) # creates a dict of the card with info from the db
 
         self.increase_quantity(similar_card['quantity'], similar_card['card_id'], newCard['quantity'])
 
