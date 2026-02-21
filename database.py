@@ -1,7 +1,5 @@
 import sqlite3
-from typing import Any, Mapping
-
-from expansion import Expansion
+from typing import Any
 
 db_name = "database.db"
 cardValueKeys = ("card_id","name", "number","exp_code","rarity","quantity")
