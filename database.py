@@ -1,5 +1,5 @@
 import sqlite3
-from typing import Any
+from typing import Any, Mapping
 
 from expansion import Expansion
 
@@ -89,30 +89,29 @@ class Database:
         
 
         row = c.fetchone()
-        if row == 'None':
+        if row is None:
             print("Card does not exist")
             conn.close()
             return False
-        similar_card = dict(zip(cardValueKeys,row))
         
-        print("Card has been found in db")
+        similar_card = dict(zip(cardValueKeys,row))
 
-        self.increase_quantity(similar_card, newCard['quantity'])
+        self.increase_quantity(similar_card['quantity'], similar_card['card_id'], newCard['quantity'])
 
         conn.close()
         return True
         
-    def increase_quantity(self, card: dict[str,Any], quantity: int):
+    def increase_quantity(self, card_quantity: int, card_id: int, quantity: int):
         """Increase the quantity of a card in the database"""
-        card['quantity'] += quantity
+        card_quantity += quantity
         conn = get_connection()
         c= conn.cursor()
         c.execute("""
                   UPDATE ownedCards
                   SET quantity = ?
                   WHERE card_id = ?""",
-                  (card['quantity'], card['card_id']))
+                  (card_quantity, card_id))
         
-        print(f"Quantity of {card.values()} increased ")
+        print(f"Quantity of id: {card_id} increased ")
         conn.commit()
         conn.close()
