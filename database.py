@@ -82,10 +82,18 @@ class Database:
             tableName = "ownedCards"
         else:
             tableName = "ownedCards" #Change this
+            
+        query = f"""INSERT OR IGNORE INTO {tableName}
+                (name, number, exp_code, rarity, quantity)
+                VALUES (?,?,?,?,?)"""
 
-        c.execute("""INSERT OR IGNORE INTO ?
-                  (name, number, exp_code, rarity, quantity) VALUES (?,?,?,?,?)""",
-                  (tableName, card['name'], card['number'], card['exp_code'], card['rarity'], card['quantity']))
+        c.execute(query,
+                (card['name'],
+                card['number'],
+                card['exp_code'],
+                card['rarity'].value,
+                card['quantity']
+                ))
         conn.commit()
         print(f"card {card['label']} succesfully added to db")
         conn.close()
@@ -99,7 +107,7 @@ class Database:
         c.execute("""SELECT card_id, name, number, exp_code, rarity, quantity 
                   FROM ownedCards
                   WHERE (name, number, exp_code, rarity) = (?,?,?,?)""",
-                  (newCard['name'], newCard['number'], newCard['exp_code'], newCard['rarity'])
+                  (newCard['name'], newCard['number'], newCard['exp_code'], newCard['rarity'].value)
                   )
         
         row = c.fetchone() #checks if an instance exists

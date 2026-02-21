@@ -1,11 +1,12 @@
 from dataclasses import dataclass
+from models.rarities import Rarity
 
 @dataclass
 class Card:
     _name: str
     _number: str
     _exp_code: str
-    _rarity: str
+    _rarity: Rarity
     _quantity: int = 0
     _card_id:int|None = None
 
@@ -24,6 +25,7 @@ class Card:
     @property
     def quantity(self):
         return self._quantity
+    
     @quantity.setter
     def quantity(self, value):
         if value < 0:
